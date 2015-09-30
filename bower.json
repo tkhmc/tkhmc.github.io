@@ -1,0 +1,19 @@
+{
+  "homepage": "https://github.com/tkhsmc/tkhsmc.github.io",
+  "authors": [
+    "tkhsmc <tokai.hs.mc@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
