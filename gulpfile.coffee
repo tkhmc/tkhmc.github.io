@@ -7,6 +7,7 @@ coffee = require "gulp-coffee"
 sass = require "gulp-sass"
 haml = require "gulp-haml"
 bower = require "main-bower-files"
+replace = require "gulp-replace"
 
 tasks = ["coffee", "haml", "scss", "img", "lib"]
 gulp.task "default", tasks
@@ -49,8 +50,18 @@ gulp.task "img", ->
     .pipe(changed("./img"))
     .pipe(gulp.dest("./img"))
 
-gulp.task "lib", ->
+gulp.task "lib-copy", ->
   return gulp.src(bower())
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./lib"))
     .pipe(gulp.dest("./lib"))
+
+# font位置修正
+gulp.task "lib-fix", ["lib-copy"], ->
+  return gulp.src("./lib/bootstrap.min.css")
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(changed("./lib/bootstrap.min.css"))
+    .pipe(replace(/url\(\.\.\/fonts\//g, "url("))
+    .pipe(gulp.dest("./lib"))
+
+gulp.task "lib", ["lib-fix"]
