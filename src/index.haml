@@ -10,7 +10,7 @@
     %link(href="lib/bootstrap.min.css" rel="stylesheet")
     %link(href="css/core.css" rel="stylesheet")
   %body
-    .container
+    %header.container
       %nav.navbar.navbar-default
         .container-fluid
           .navbar-header
@@ -50,16 +50,48 @@
                   %li.divider
                   %li
                     %a(href="#")> action
-       -# http://wikiwiki.jp/mycom/
-      .row
-        .main.col-md-12#pjax-container
-          .col-md-12
-            %h1 東海高校マイコン班
-              %small> Tokai High School Micom Club
-          .col-md-12
-            %p.lead 東海高校の電波科学研究部マイコン班のWebサイトへようこそ！
-            %p 主な活動はプログラミング、電子工作、PC自作をしています。ただし、最近は専らPCを使っています。記念祭(学園文化祭)に出品したり、大会に出場したりしています。
-            %p 校内の生徒であればだれでも入部は大歓迎です。
+    .container
+      .main#pjax-container
+        .jumbotron
+          %h1 東海高校マイコン班
+            %br
+            %small Tokai High School Micom Club
+          %p.lead 東海高校の電波科学研究部マイコン班のWebサイトへようこそ！
+          %p 主な活動はプログラミング、電子工作、PC自作をしています。ただし、最近は専らPCを使っています。記念祭(学園文化祭)に出品したり、大会に出場したりしています。校内の生徒であればだれでも入部は大歓迎です。
+          %p
+            %a.btn.btn-primary.btn-lg(href="#") 概要
+        .row
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                %h2.panel-title 東海高校127th記念祭
+              .panel-body
+                %p
+                  127th記念祭は終了しました。当日来てくださった方々に感謝を。
+                %a.btn.btn-info(href="http://kinensai.jp/") 東海高校127th記念祭公式サイト
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                %h2.panel-title 部員募集
+              .panel-body
+                %p
+                  詳しくは部員募集要項を参照してください
+                %a.btn.btn-info(href="#") 部員募集要項
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                %h2.panel-title ドキュメント
+              %ul.list-group
+                %li.list-group-item
+                  %a プログラミング講座
+                %li.list-group-item
+                  %a Javaパッケージ名規約
+    %footer.footer
+      .container
+        %p.text-muted
+          (C) 東海高校電波科学研究部マイコン班 2005-2015
+
+    -# http://wikiwiki.jp/mycom/
 
     %script(src="lib/modernizr.js")
     %script(src="lib/jquery.min.js")
