@@ -1,4 +1,5 @@
 {
+  "name": "tkhmc.github.io",
   "homepage": "https://github.com/tkhsmc/tkhsmc.github.io",
   "authors": [
     "tkhsmc <tokai.hs.mc@gmail.com>"
@@ -14,8 +15,10 @@
     "bower_components"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.5",
-    "jquery": "~2.1.4"
+    "bootstrap": "3.*",
+    "modernizr": "2.*",
+    "jquery": "2.*",
+    "jquery-pjax": "1.*"
   },
   "overrides": {
     "bootstrap": {
@@ -29,10 +32,11 @@
         "dist/fonts/glyphicons-halflings-regular.woff2"
       ]
     },
+    "modernizr": {
+      "main": [ "modernizr.js" ]
+    },
     "jquery": {
-      "main": [
-        "dist/jquery.min.js"
-      ]
+      "main": [ "dist/jquery.min.js" ]
     }
   }
 }

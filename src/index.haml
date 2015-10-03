@@ -4,34 +4,65 @@
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
     %meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
-    
+
     %title 東海高校マイコン班
-    
+
     %link(href="lib/bootstrap.min.css" rel="stylesheet")
     %link(href="css/core.css" rel="stylesheet")
   %body
     .container
+      %nav.navbar.navbar-default
+        .container-fluid
+          .navbar-header
+            %button.navbar-toggle.collapsed(type="button" data-toggle="collapse")
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+            %a.navbar-brand(href="#") 東海高校マイコン
+          .collapse.navbar-collapse#bs-example-navbar-collapse-1
+            %ul.nav.navbar-nav
+              %li.active
+                %a(href="#")> Home
+                  %span.sr-only> (current)
+              %li
+                %a(href="#")> link
+              %li.dropdown
+                %a.dropdown-toggle(href="#" data-toggle="dropdown") Dropdown
+                  %span.caret>
+                %ul.dropdown-menu
+                  %li
+                    %a(href="#")> action
+                  %li.divider
+                  %li
+                    %a(href="#")> action
+            %form.navbar-form.navbar-left
+              .form-group
+                %input.form-control(type="text" placeholder="Search")
+              %button.btn.btn-default(type="submit") Submit
+            %ul.nav.navbar-nav.navbar-right
+              %li
+                %a(href="#")> Link
+              %li.dropdown
+                %a.dropdown-toggle(href="#" data-toggle="dropdown") Dropdown
+                  %span.caret>
+                %ul.dropdown-menu
+                  %li
+                    %a(href="#")> action
+                  %li.divider
+                  %li
+                    %a(href="#")> action
+       -# http://wikiwiki.jp/mycom/
       .row
-        .col-md-12
-          %nav.navbar.navbar-default
-            .container-fluid
-              .navbar-header
-                %button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false")
-                  %span.sr-only Toggle navigation
-                  %span.icon-bar
-                %a.navbar-brand(href="#") 東海高校マイコン班
-          
-          -# http://getbootstrap.com/components/#navbar
-          -# http://wikiwiki.jp/mycom/
-          
-        .col-md-12
-          %h1 東海高校マイコン班
-            %small> Tokai High School Micom Club
-        .col-md-12
-          %p.lead 東海高校の電波科学研究部マイコン班のWebサイトへようこそ！
-          %p 主な活動はプログラミング、電子工作、PC自作をしています。ただし、最近は専らPCを使っています。記念祭(学園文化祭)に出品したり、大会に出場したりしています。
-          %p 校内の生徒であればだれでも入部は大歓迎です。
-    
+        .main.col-md-12#pjax-container
+          .col-md-12
+            %h1 東海高校マイコン班
+              %small> Tokai High School Micom Club
+          .col-md-12
+            %p.lead 東海高校の電波科学研究部マイコン班のWebサイトへようこそ！
+            %p 主な活動はプログラミング、電子工作、PC自作をしています。ただし、最近は専らPCを使っています。記念祭(学園文化祭)に出品したり、大会に出場したりしています。
+            %p 校内の生徒であればだれでも入部は大歓迎です。
+
+    %script(src="lib/modernizr.js")
     %script(src="lib/jquery.min.js")
+    %script(src="lib/jquery.pjax.js")
     %script(src="lib/bootstrap.min.js")
     %script(src="js/core.js")
