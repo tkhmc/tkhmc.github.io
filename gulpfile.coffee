@@ -13,7 +13,7 @@ tasks = ["coffee", "haml", "scss", "img", "lib"]
 gulp.task "default", tasks
 
 gulp.task "clean", (cb) ->
-  return del ["./*.html", "./js", "./css", "./img"], cb
+  return del ["./bin/**"], cb
 
 gulp.task "watch", ["default"], ->
   gulp.watch "./src/**/*.coffee", ["coffee"]
@@ -26,42 +26,42 @@ gulp.task "watch", ["default"], ->
 gulp.task "coffee", ->
   return gulp.src "./src/**/*.coffee"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(changed("./"))
+    .pipe(changed("./bin"))
     .pipe(coffee())
-    .pipe(gulp.dest("./"))
+    .pipe(gulp.dest("./bin"))
 
 gulp.task "haml", ->
   return gulp.src "./src/**/*.haml"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(changed("./"))
+    .pipe(changed("./bin"))
     .pipe(haml())
-    .pipe(gulp.dest("./"))
+    .pipe(gulp.dest("./bin"))
 
 gulp.task "scss", ->
   return gulp.src "./src/**/*.scss"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(changed("./"))
+    .pipe(changed("./bin"))
     .pipe(sass())
-    .pipe(gulp.dest("./"))
+    .pipe(gulp.dest("./bin"))
 
 gulp.task "img", ->
   return gulp.src "./src/**/img/*"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(changed("./img"))
-    .pipe(gulp.dest("./img"))
+    .pipe(changed("./bin/img"))
+    .pipe(gulp.dest("./bin/img"))
 
 gulp.task "lib-copy", ->
   return gulp.src(bower())
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(changed("./lib"))
-    .pipe(gulp.dest("./lib"))
+    .pipe(changed("./bin/lib"))
+    .pipe(gulp.dest("./bin/lib"))
 
 # font位置修正
 gulp.task "lib-fix", ["lib-copy"], ->
-  return gulp.src("./lib/bootstrap.min.css")
+  return gulp.src("./bin/lib/bootstrap.min.css")
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(changed("./lib/bootstrap.min.css"))
+    .pipe(changed("./bin/lib/bootstrap.min.css"))
     .pipe(replace(/url\(\.\.\/fonts\//g, "url("))
-    .pipe(gulp.dest("./lib"))
+    .pipe(gulp.dest("./bin/lib"))
 
 gulp.task "lib", ["lib-fix"]
