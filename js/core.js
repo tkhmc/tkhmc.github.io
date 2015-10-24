@@ -41,7 +41,7 @@
     var filename, menuBrand;
     filename = window.location.href.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1];
     menuBrand = $(".menu-brand");
-    if (filename !== "index") {
+    if (filename !== "index" && filename !== "") {
       menuBrand.attr("href", "index.html");
     } else {
       menuBrand.attr("href", "#");
