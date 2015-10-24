@@ -49,33 +49,106 @@
                   %button.btn.btn-default(type="submit") 検索
       #contents.container
         .main#pjax
-          %h1 summary
+          .page-header
+            %h1 概要
           .row
             .col-md-4
               .panel.panel-default
                 .panel-heading
-                  %h2.panel-title 東海高校127th記念祭
+                  %h2.panel-title マイコン班部員
                 .panel-body
                   %p
-                    127th記念祭は終了しました。当日来てくださった方々に感謝を。
-                  %a.btn.btn-info(href="http://kinensai.jp/") 東海高校127th記念祭公式サイト
+                    パソコン対人比が1.3くらいﾊｲ
+                    ハム班との関わりは一切ない
+                    1年生しかいない
+                %table.table
+                  %tr
+                    %th 学年
+                    %th 名前
+                    %th 肩書き
+                  %tr
+                    %td 1年生
+                    %td 両手の指の数程度の人数
+                    %td
+                  %tr
+                    %td(rowspan=9) OB
+                    %td そをり
+                    %td 看板娘など
+                      %small マスコット・モルモット・ドジっ娘・ハーマイオニー
+                  %tr
+                    %td X
+                    %td 副班長･リナ厨
+                  %tr
+                    %td noname
+                    %td 前班長
+                  %tr
+                    %td つっちょ
+                    %td 前々班長
+                  %tr
+                    %td AutoLook
+                    %td
+                  %tr
+                    %td atmonad
+                    %td
+                  %tr
+                    %td yappy
+                    %td 前々々班長
+                  %tr
+                    %td Prog.A
+                    %td 前々々々部長
+                %small 注:HNを持っていない人は人数のみ記載
             .col-md-4
               .panel.panel-default
                 .panel-heading
-                  %h2.panel-title 部員募集
+                  %h2.panel-title マイコン班のPC
                 .panel-body
                   %p
-                    詳しくは部員募集要項を参照してください
-                  %a.btn.btn-info(href="recruit.html") 部員募集要項
-            .col-md-4
-              .panel.panel-default
-                .panel-heading
-                  %h2.panel-title ドキュメント
+                    暗い色のものは破棄済み/使用していないPCです
                 %ul.list-group
+                  %li.list-group-item Einzbern
                   %li.list-group-item
-                    %a(href="lecture.html") プログラミング講座
-                  %li.list-group-item
-                    %a(href="java-package.html") Javaパッケージ名規約
+                    %button.btn.btn-link(type="button" data-toggle="modal" data-target="#PCHarris") Harris
+                  %li.list-group-item Tolstoi
+                  %li.list-group-item Ptolemaios
+                  %li.list-group-item Aleckthunder
+                  %li.list-group-item.old Tiglath-Pileser
+                  %li.list-group-item.old Rasputin(Rozhdestvenskii)
+                  %li.list-group-item.old NebuchadnezzarⅡ
+                  %li.list-group-item.old Andoropov
+                %small 2012/06現在
+            #PCHarris.modal.fade
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title Modal title
+                  .modal-body
+                    %p うぇーい
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title マイコン班の音
+                %ul.list-group
+                  %li.list-group-item ビープ音
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title マイコン班推奨飲料
+                %ul.list-group
+                  %li.list-group-item ドクターペッパー
+                  %li.list-group-item 缶コーヒー
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title マイコン班推奨アニメ
+                %ul.list-group
+                  %li.list-group-item Y戯王
+                  %li.list-group-item シュタインズ・ゲート
+                  %li.list-group-item ローゼンメイデン
+                  %li.list-group-item 未来日記
       %footer.footer
         .container
           %p.text-muted
