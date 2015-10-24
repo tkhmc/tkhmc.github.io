@@ -1,5 +1,5 @@
 (function() {
-  var person;
+  var person, setEvent;
 
   person = {
     ProgA: {
@@ -28,14 +28,27 @@
     }
   };
 
-  $("#Person").on("show.bs.modal", function(e) {
-    var button, desc, modal, name;
-    button = $(e.relatedTarget);
-    name = button.data("name");
-    modal = $(this);
-    modal.find("h4.modal-title").text(button.text());
-    desc = person[name].desc;
-    modal.find(".modal-body").html('<div class="row">' + desc + "</div>");
-  });
+  setEvent = function() {
+    $(document).find("#Person").on("show.bs.modal", function(e) {
+      var button, desc, modal, name;
+      button = $(e.relatedTarget);
+      console.log(button);
+      console.log(person);
+      console.log(this);
+      name = button.data("name");
+      modal = $(this);
+      modal.find("h4.modal-title").text(button.text());
+      desc = person[name].desc;
+      modal.find(".modal-body").html('<div class="row">' + desc + "</div>");
+    });
+  };
+
+  setEvent();
+
+  if ($.support.pjax) {
+    $(document).on("pjax:complete", function(e, data) {
+      return setEvent();
+    });
+  }
 
 }).call(this);
