@@ -13,7 +13,7 @@ tasks = ["coffee", "haml", "scss", "img", "lib"]
 gulp.task "default", tasks
 
 gulp.task "clean", (cb) ->
-  return del ["./index.html", "./js", "./css", "./img"], cb
+  return del ["./*.html", "./js", "./css", "./img"], cb
 
 gulp.task "watch", ["default"], ->
   gulp.watch "./src/**/*.coffee", ["coffee"]
