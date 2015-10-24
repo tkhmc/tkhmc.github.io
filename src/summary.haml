@@ -24,13 +24,13 @@
                 %a(href="#")> ホーム
                   %span.sr-only> (current)
               %li
-                %a(href="summary.html")> 概要
+                %a(href="summary")> 概要
               %li
-                %a(href="activity.html")> 活動内容
+                %a(href="activity")> 活動内容
               %li
-                %a(href="downloads.html")> ダウンロード
+                %a(href="downloads")> ダウンロード
               %li
-                %a(href="links.html")> リンク
+                %a(href="links")> リンク
               -# ドロップダウンリストの例
                 %li.dropdown
                   %a.dropdown-toggle(href="#" data-toggle="dropdown") Dropdown
@@ -48,14 +48,7 @@
                 %button.btn.btn-default(type="submit") 検索
     .container
       .main#pjax
-        .jumbotron
-          %h1 東海高校マイコン班
-            %br
-            %small Tokai High School Micom Club
-          %p.lead 東海高校の電波科学研究部マイコン班のWebサイトへようこそ！
-          %p 主な活動はプログラミング、電子工作、PC自作をしています。ただし、最近は専らPCを使っています。記念祭(学園文化祭)に出品したり、大会に出場したりしています。校内の生徒であればだれでも入部は大歓迎です。
-          %p
-            %a.btn.btn-primary.btn-lg(href="summary.html") 概要
+        %h1 summary
         .row
           .col-md-4
             .panel.panel-default
@@ -72,16 +65,16 @@
               .panel-body
                 %p
                   詳しくは部員募集要項を参照してください
-                %a.btn.btn-info(href="recruit.html") 部員募集要項
+                %a.btn.btn-info(href="recruit") 部員募集要項
           .col-md-4
             .panel.panel-default
               .panel-heading
                 %h2.panel-title ドキュメント
               %ul.list-group
                 %li.list-group-item
-                  %a(href="lecture.html") プログラミング講座
+                  %a(href="lecture") プログラミング講座
                 %li.list-group-item
-                  %a(href="java-package.html") Javaパッケージ名規約
+                  %a(href="java-package") Javaパッケージ名規約
     %footer.footer
       .container
         %p.text-muted
