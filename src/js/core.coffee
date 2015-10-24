@@ -5,7 +5,7 @@ removeActiveAll = ->
   $(".menu-index").removeClass("active")
   $(".menu-summary").removeClass("active")
   $(".menu-activity").removeClass("active")
-  $(".menu-downloads").removeClass("active")
+  $(".menu-products").removeClass("active")
   $(".menu-links").removeClass("active")
   return
 removeActiveTag = ->
@@ -18,7 +18,7 @@ setLinks = ->
   $(".menu-index").children("a").attr("href", "index.html")
   $(".menu-summary").children("a").attr("href", "summary.html")
   $(".menu-activity").children("a").attr("href", "activity.html")
-  $(".menu-downloads").children("a").attr("href", "downloads.html")
+  $(".menu-products").children("a").attr("href", "products.html")
   $(".menu-links").children("a").attr("href", "links.html")
   return
 setActive = (activeList) ->
