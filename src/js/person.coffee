@@ -25,17 +25,29 @@ person = {
   }
 }
 
-$("#Person").on("show.bs.modal", (e) ->
-  button = $(e.relatedTarget)
-  name = button.data("name")
-  modal = $(@)
-  # タイトルを設定
-  modal.find("h4.modal-title").text(button.text())
+setEvent = ->
+  $(document).find("#Person").on("show.bs.modal", (e) ->
+    button = $(e.relatedTarget)
+    console.log button
+    console.log person
+    console.log @
+    name = button.data("name")
+    modal = $(@)
+    # タイトルを設定
+    modal.find("h4.modal-title").text(button.text())
 
-  # 説明
-  desc = person[name].desc
+    # 説明
+    desc = person[name].desc
 
-  # 内容を適応
-  modal.find(".modal-body").html('<div class="row">' + desc + "</div>")
+    # 内容を適応
+    modal.find(".modal-body").html('<div class="row">' + desc + "</div>")
+    return
+  )
   return
-)
+
+setEvent()
+
+if $.support.pjax
+  $(document).on("pjax:complete", (e, data) ->
+    setEvent()
+  )
