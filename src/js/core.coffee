@@ -14,10 +14,33 @@ removeActiveTag = ->
 addActiveTag = (activeList) ->
   activeList.children("a").append('<span class="sr-only">(current)</span>')
   return
+setLinks = ->
+  $(".menu-index").children("a").attr("href", "index.html")
+  $(".menu-summary").children("a").attr("href", "summary.html")
+  $(".menu-activity").children("a").attr("href", "activity.html")
+  $(".menu-downloads").children("a").attr("href", "downloads.html")
+  $(".menu-links").children("a").attr("href", "links.html")
+  return
 setActive = (activeList) ->
+  setLinks()
   activeList.addClass("active")
-  addActiveTag(activeList)
   activeList.children("a").attr("href", "#")
+  addActiveTag(activeList)
+  return
+pageMenu = -># メニューのリンク
+  filename = window.location.href.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1]
+  menuBrand = $(".menu-brand")
+  if filename isnt "index"
+    menuBrand.attr("href", "index.html")
+  else
+    menuBrand.attr("href", "#")
+  removeActiveTag()
+  removeActiveAll()
+  setActive( $(".menu-" + filename) )
+  return
+
+$ ->
+  pageMenu()
   return
 
 # pjaxのロード
@@ -52,14 +75,5 @@ if $.support.pjax
       opacity : 1
     }, 300)
 
-    # メニューのリンク
-    filename = window.location.href.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1]
-    menuBrand = $(".menu-brand")
-    if filename isnt "index"
-      menuBrand.attr("href", "index.html")
-    else
-      menuBrand.attr("href", "#")
-    removeActiveTag()
-    removeActiveAll()
-    setActive( $(".menu-" + filename) )
+    pageMenu()
   )

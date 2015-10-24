@@ -10,75 +10,76 @@
     %link(href="lib/bootstrap.min.css" rel="stylesheet")
     %link(href="css/core.css" rel="stylesheet")
   %body
-    %header.container
-      %nav.navbar.navbar-default
-        .container-fluid
-          .navbar-header
-            %button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#navbar-collapse")
-              %span.sr-only Toggle navigation
-              %span.icon-bar
-            %a.navbar-brand.menu-brand(href="index.html") 東海高校マイコン
-          .collapse.navbar-collapse#navbar-collapse
-            %ul.nav.navbar-nav
-              %li.menu-index.active
-                %a(href="index.html")> ホーム
-                  %span.sr-only> (current)
-              %li.menu-summary
-                %a(href="summary.html")> 概要
-              %li.menu-activity
-                %a(href="activity.html")> 活動内容
-              %li.menu-downloads
-                %a(href="downloads.html")> ダウンロード
-              %li.menu-links
-                %a(href="links.html")> リンク
-              -# ドロップダウンリストの例
-                %li.dropdown
-                  %a.dropdown-toggle(href="#" data-toggle="dropdown") Dropdown
-                    %span.caret>
-                  %ul.dropdown-menu
-                    %li
-                      %a(href="#")> action
-                    %li.divider
-                    %li
-                      %a(href="#")> action
-            -# 検索ボックスの例
-              %form.navbar-form.navbar-right
-                .form-group
-                  %input.form-control(type="text" placeholder="Search")
-                %button.btn.btn-default(type="submit") 検索
-    .container
-      .main#pjax
-        %h1 summary
-        .row
-          .col-md-4
-            .panel.panel-default
-              .panel-heading
-                %h2.panel-title 東海高校127th記念祭
-              .panel-body
-                %p
-                  127th記念祭は終了しました。当日来てくださった方々に感謝を。
-                %a.btn.btn-info(href="http://kinensai.jp/") 東海高校127th記念祭公式サイト
-          .col-md-4
-            .panel.panel-default
-              .panel-heading
-                %h2.panel-title 部員募集
-              .panel-body
-                %p
-                  詳しくは部員募集要項を参照してください
-                %a.btn.btn-info(href="recruit") 部員募集要項
-          .col-md-4
-            .panel.panel-default
-              .panel-heading
-                %h2.panel-title ドキュメント
-              %ul.list-group
-                %li.list-group-item
-                  %a(href="lecture") プログラミング講座
-                %li.list-group-item
-                  %a(href="java-package") Javaパッケージ名規約
-    %footer.footer
-      .container
-        %p.text-muted
-          (C) 東海高校電波科学研究部マイコン班 2005-2015
+    #wrap
+      %header.container
+        %nav.navbar.navbar-default
+          .container-fluid
+            .navbar-header
+              %button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#navbar-collapse")
+                %span.sr-only Toggle navigation
+                %span.icon-bar
+              %a.navbar-brand.menu-brand(href="index.html") 東海高校マイコン
+            .collapse.navbar-collapse#navbar-collapse
+              %ul.nav.navbar-nav
+                %li.menu-index.active
+                  %a(href="index.html")> ホーム
+                    %span.sr-only> (current)
+                %li.menu-summary
+                  %a(href="summary.html")> 概要
+                %li.menu-activity
+                  %a(href="activity.html")> 活動内容
+                %li.menu-downloads
+                  %a(href="downloads.html")> ダウンロード
+                %li.menu-links
+                  %a(href="links.html")> リンク
+                -# ドロップダウンリストの例
+                  %li.dropdown
+                    %a.dropdown-toggle(href="#" data-toggle="dropdown") Dropdown
+                      %span.caret>
+                    %ul.dropdown-menu
+                      %li
+                        %a(href="#")> action
+                      %li.divider
+                      %li
+                        %a(href="#")> action
+              -# 検索ボックスの例
+                %form.navbar-form.navbar-right
+                  .form-group
+                    %input.form-control(type="text" placeholder="Search")
+                  %button.btn.btn-default(type="submit") 検索
+      #contents.container
+        .main#pjax
+          %h1 summary
+          .row
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title 東海高校127th記念祭
+                .panel-body
+                  %p
+                    127th記念祭は終了しました。当日来てくださった方々に感謝を。
+                  %a.btn.btn-info(href="http://kinensai.jp/") 東海高校127th記念祭公式サイト
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title 部員募集
+                .panel-body
+                  %p
+                    詳しくは部員募集要項を参照してください
+                  %a.btn.btn-info(href="recruit.html") 部員募集要項
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title ドキュメント
+                %ul.list-group
+                  %li.list-group-item
+                    %a(href="lecture.html") プログラミング講座
+                  %li.list-group-item
+                    %a(href="java-package.html") Javaパッケージ名規約
+      %footer.footer
+        .container
+          %p.text-muted
+            (C) 東海高校電波科学研究部マイコン班 2005-2015
 
     -# http://wikiwiki.jp/mycom/
     -# https://github.com/defunkt/jquery-pjax
