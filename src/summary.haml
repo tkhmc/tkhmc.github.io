@@ -56,16 +56,14 @@
                     %th 名前
                     %th 肩書き
                   %tr
-                    %td 1年生
+                    %td(rowspan=3) 1年生
                     %td
                     %td 班長
                   %tr
-                    %td 1年生
                     %td
                       %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="emoji") (ﾟ∀ﾟ)
                     %td とにかくうるさいやつ()
                   %tr
-                    %td 1年生
                     %td その他片手の指の数程度の人数
                     %td
                   %tr
@@ -81,13 +79,13 @@
                   %tr
                     %td
                       %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="sowori") そをり
-                    %td 看板娘など
-                      %br
-                      %small マスコット・モルモット・ドジっ娘・ハーマイオニー
+                    %td
+                      %button.btn-link(type="button" data-toggle="tooltip" data-placement="bottom" title="(特に)女装したそをりのこと。別名ハーマイオニー(命名は公☆。元ネタはハヤテのアレ)記念祭の打ち上げで本人が言っており、また誇りにしている…らしい。3学期始業式に再び女装し、公☆に写真のポーズの注文をされたりストーキングされていた。そういや彼は画像を見て｢自分で見ても可愛い｣なんてこと言ってた記憶が…。他にマスコット・モルモット・ドジっ娘・ハーマイオニー") 看板娘など
                   %tr
                     %td
                       %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="x") X
-                    %td 副々班長･リナ厨
+                    %td 副々班長･
+                      %button.btn-link(type="button" data-toggle="tooltip" data-placement="bottom" title="Linux厨のこと") リナ厨
                   %tr
                     %td
                       %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="noname") noname
@@ -177,13 +175,13 @@
                     .pc-summary
                       .page-header
                         %h2.h3 概要
-                        %p
-                          3台あり、PC98とDOS/V2台である。詳細不明。その他Nebuchadnezzarになる前のPCで余ったマザーボードが存在し、またCRTモニタが二台放置されている。Khrushchevは分解され、壊れていないHDDはAndoropovへ移設された。<br>Nebuchadnezzarが壊れ、新しいPC(NebuchadnezzarⅡ)が完成したため、使える部品だけを取り出されてあとは屑鉄と化した。これも過去のPCに。
+                      %p
+                        3台あり、PC98とDOS/V2台である。詳細不明。その他Nebuchadnezzarになる前のPCで余ったマザーボードが存在し、またCRTモニタが二台放置されている。Khrushchevは分解され、壊れていないHDDはAndoropovへ移設された。<br>Nebuchadnezzarが壊れ、新しいPC(NebuchadnezzarⅡ)が完成したため、使える部品だけを取り出されてあとは屑鉄と化した。これも過去のPCに。
                     .pc-config
                       .page-header
                         %h2.h3 マシン構成
-                        %p
-                          Nebuchadnezzar以前の2台のPCの概要はほとんど不明。ただ、どちらかにPentiumがはいっていたので、非常に古いのが分かる。分解されたままになっておりほぼゴミ扱いである。謎の落書きが存在する。マイコン班活動場所は化学室にあり、その後部に放置されたままになっているが、処分予定は今のところない。
+                      %p
+                        Nebuchadnezzar以前の2台のPCの概要はほとんど不明。ただ、どちらかにPentiumがはいっていたので、非常に古いのが分かる。分解されたままになっておりほぼゴミ扱いである。謎の落書きが存在する。マイコン班活動場所は化学室にあり、その後部に放置されたままになっているが、処分予定は今のところない。
                   .modal-footer
                     %button.btn.btn-default(type="button" data-dismiss="modal") Close
             .col-md-4
@@ -191,27 +189,181 @@
                 .panel-heading
                   %h2.panel-title マイコン班の音
                 %ul.list-group
-                  %li.list-group-item ビープ音
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#Beep") ビープ音
+            #Beep.modal.fade
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title ビープ音
+                  .modal-body
+                    .beep-explanation
+                      .page-header
+                        %h2.h3 解説
+                      %p
+                        %b> マイコン班の音。
+                        PCの内部にある小さなスピーカーから発せられる音のこと。
+                        %br
+                        例えば、C#ではConsole.Beep()を使うことで鳴らすことができる。
+                        %br
+                        マイコン班では音にこれを使うことを推奨している…はず。
+                    .beep-sample
+                      .page-header
+                        %h2.h3 サンプル
+                      %a(href="img/beep.lzh" download) サンプルプロジェクト
+                    .beep-caution
+                      .page-header
+                        %h2.h3 注意
+                      %p
+                        Windows 95では周波数と時間は無視されます。
+                        %br
+                        .NETはもともと対応してないけど。
+                    .beep-proto
+                      .page-header
+                        %h2.h3 プロトタイプ
+                      %p
+                        Win32API C/C++用
+                        %pre
+                          BOOL Beep(
+                          %br
+                          \  DWORD dwFreq,      // 音の周波数
+                          %br
+                          \  DWORD dwDuration   // 音の持続時間
+                          %br
+                          );
+                      %p
+                        標準Cライブラリ
+                        %pre
+                          printf("\a");
+                    .beep-support
+                      .page-header
+                        %h2.h3 対応情報
+                      %p
+                        Windows NT/2000:Windows NT 3.1 以降
+                        %br
+                        Windows 95/98:Windows 95 以降
+                        %br
+                        ヘッダー:Winbase.h 内で宣言、Windows.h をインクルード
+                        %br
+                        インポートライブラリ:Kernel32.lib を使用
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
             .col-md-4
               .panel.panel-default
                 .panel-heading
                   %h2.panel-title マイコン班推奨飲料
                 %ul.list-group
-                  %li.list-group-item ドクターペッパー
-                  %li.list-group-item 缶コーヒー
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#Docp") ドクターペッパー
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#Coffee") 缶コーヒー
+            #Docp.modal.fade
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title ドクターペッパー
+                  .modal-body
+                    %p
+                      この地方では滅多に売られていない独特の味の炭酸飲料。
+                      %br
+                      好みが大きく分かれる。
+                      %br
+                      先日自販機での占める量がなんと4つに。
+                      %br
+                      学校内でも人気らしい。
+                      %br
+                      最近ショップQQで500mlペットボトルが売られているのを発見。
+                      %br
+                      どうやら少しずつこの地方に進出している模様。
+                      %br
+                      先日1Gがごんぶとやミルクシーフードにドクターペッパーを入れていた。まずい。
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
+            #Coffee.modal.fade
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title ドクターペッパー
+                  .modal-body
+                    %p
+                      学校の自販機では100円で、町中の自販機では120円で、ボウリング場とかでは150円程度で入手できる
+                      %br
+                      茶褐色の液体の総称。
+                      %br
+                      紅茶、モカ等と同じマイコン班員の燃料である
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
             .col-md-4
               .panel.panel-default
                 .panel-heading
                   %h2.panel-title マイコン班推奨アニメ
                 %ul.list-group
-                  %li.list-group-item Y戯王
-                  %li.list-group-item シュタインズ・ゲート
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#YGO") Y戯王
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#Shutage") シュタインズ・ゲート
                   %li.list-group-item ローゼンメイデン
                   %li.list-group-item 未来日記
+            #YGO.modal.fade
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title ドクターペッパー
+                  .modal-body
+                    %p
+                      様々なネタを生み出した
+                      %s>至高の
+                      ネタアニメ。
+                      %br
+                      滅びのバーストストリームやドロー!モンスターカードなどの言葉はよく
+                      %s>マイコン班でも
+                      叫ばれている。
+                      %br
+                      現在は世界観をほぼ一新した遊戯王GXが
+                      %s>好評
+                      放送終了。
+                      %br
+                      新たに遊戯王5D'sが公表放映中。
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
+            #Shutage.modal.fade
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title ドクターペッパー
+                  .modal-body
+                    %p
+                      おい、そこの貴様! 俺たちが視えているか?
+                      %br
+                      なぜ答えない…。モニターのそちら側にいる、間抜け面の貴様だ!
+                      %br
+                      まぁいい。ここが電波科学研究部 マイコン班　wikiだ。
+                      %br
+                      電波科学研究部 マイコン班　wikiの目的は、サイバー社会の支配構造の変革にある。
+                      %br
+                      混沌に巻き込むプログラムを生み出すことだ。
+                      %br
+                      わかったか? わかったなら、貴様の秘密をさっさと吐くがいい!
+                      %br
+                      「俺だ。何?機関からの妨害を受けているだと?
+                      %br
+                      まぁいい。ではまた会おう。エル・プサイ・コングルゥ」
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
       %footer.footer
         .container
           %p.text-muted
-            (C) 東海高校電波科学研究部マイコン班 2005-2015
+            (C) 東海高校電波科学研究部マイコン班 (ﾟ∀ﾟ) 2005-2015
 
     %script(src="lib/modernizr.js")
     %script(src="lib/jquery.min.js")

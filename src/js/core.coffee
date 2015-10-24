@@ -84,3 +84,8 @@ if $.support.pjax
     # メニューの変更
     pageMenu()
   )
+
+# bootstrapのtooltipの有効化
+$ ->
+  $('[data-toggle="tooltip"]').tooltip()
+  return
