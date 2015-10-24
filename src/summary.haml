@@ -95,7 +95,7 @@
                 %ul.list-group
                   %li.list-group-item Einzbern
                   %li.list-group-item
-                    %button.btn-link(type="button" data-toggle="modal" data-target="#PCHarris") Harris
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="harris") Harris
                   %li.list-group-item Tolstoi
                   %li.list-group-item Ptolemaios
                   %li.list-group-item Aleckthunder
@@ -104,84 +104,14 @@
                   %li.list-group-item.old NebuchadnezzarⅡ
                   %li.list-group-item.old Andoropov
                 %small 2012/06現在
-            #PCHarris.modal.fade
+            #PC.modal.fade
               .modal-dialog
                 .modal-content
                   .modal-header
                     %button.close(type="button" data-dismiss="modal")
                       %span> &times;
-                    %h4.modal-title Harris
+                    %h4.modal-title
                   .modal-body
-                    .pc-summary
-                      .page-header
-                        %h2.h3 概要
-                      %p
-                        2011年3月に購入したPC。(最終は2011年5月)
-                        %br
-                        何故か高性能CPUとマザーボードが故障・・・
-                        %br
-                        AMD製のPhenomⅡx6のCPUを使用するなど、部の掟を破った殻を打ち破った部分が多く、スペックは過去に類を見ない贅沢なPC…のはずだが故障のため、再び買ったCPUとマザーボードの費用を相当ケチっており、デュアルコアCPUで、microATXサイズのマザーボードとなった。グラフィックはDirectX11対応の高性能すぎるモデルとなっている。よく班長が占領している。
-                        %br
-                        今のところマイコン班唯一の7マシンのはずであり、皆7の軽快さに驚いている!(特にインストールにかかる時間)
-                        %br
-                        性能はまだ疑問である。
-                        %br
-                        ちなみにマシン名はHarrisであるが、最初はPerryになるはずだった。
-                    .pc-config
-                      .page-header
-                        %h2.h3 マシン構成
-                      %table.table.table-striped
-                        %tr
-                          %td OS
-                          %td Windows 7 Professional
-                        %tr
-                          %td CPU
-                          %td Core 2 Duo E6600(2.4GHz*2)
-                        %tr
-                          %td M/B
-                          %td AOpen 946GZ-DAG
-                        %tr
-                          %td メモリ
-                          %td 2GB
-                        %tr
-                          %td HDD
-                          %td 250GB
-                        %tr
-                          %td モニタ
-                          %td 19inchWIDE
-                        %tr
-                          %td(rowspan=2) ドライブ
-                          %td スーパーマルチドライブx1
-                        %tr
-                          %td FDDx1
-                        %tr
-                          %td ビデオカード
-                          %td GeForce 8500GT
-                        %tr
-                          %td サウンドカード
-                          %td M/B付属チップ
-                    .pc-winsat
-                      .page-header
-                         %h2.h3 WinSATスコア
-                      %table.table.table-striped
-                        %tr
-                          %td 総合評価
-                          %td 4.8
-                        %tr
-                          %td CPU
-                          %td 5.3
-                        %tr
-                          %td メモリ
-                          %td 5.6
-                        %tr
-                          %td グラフィックス
-                          %td 4.8
-                        %tr
-                          %td ゲーム用グラフィックス
-                          %td 5.0
-                        %tr
-                          %td ハードディスク
-                          %td 5.4
                   .modal-footer
                     %button.btn.btn-default(type="button" data-dismiss="modal") Close
             .col-md-4
@@ -216,3 +146,4 @@
     %script(src="lib/jquery.pjax.js")
     %script(src="lib/bootstrap.min.js")
     %script(src="js/core.js")
+    %script(src="js/pc.js")
