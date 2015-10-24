@@ -98,20 +98,51 @@
                     %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="harris") Harris
                   %li.list-group-item Tolstoi
                   %li.list-group-item Ptolemaios
-                  %li.list-group-item Aleckthunder
-                  %li.list-group-item.old Tiglath-Pileser
-                  %li.list-group-item.old Rasputin(Rozhdestvenskii)
-                  %li.list-group-item.old NebuchadnezzarⅡ
-                  %li.list-group-item.old Andoropov
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="alecthunder") Alecthunder
+                  %li.list-group-item.old
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="tiglathPileser") Tiglath-Pileser
+                  %li.list-group-item.old
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="rasputin") Rasputin(Rozhdestvenskii)
+                  %li.list-group-item.old
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="nebuchadnezzarii") NebuchadnezzarⅡ[ネブカドネザル二世]
+                  %li.list-group-item.old
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="andoropov") Andoropov[アンドロポフ]
+                  %li.list-group-item.old
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="nebuchadnezzar") Nebuchadnezzar[ネブカドネザル]
+                  %li.list-group-item.old
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="khrushchev") Khrushchev[フルシチョフ]
+                  %li.list-group-item.old
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PCOld") 過去のPC
                 %small 2012/06現在
             #PC.modal.fade
-              .modal-dialog
+              .modal-dialog.modal-lg
                 .modal-content
                   .modal-header
                     %button.close(type="button" data-dismiss="modal")
                       %span> &times;
                     %h4.modal-title
                   .modal-body
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
+            #PCOld.modal.fade
+              .modal-dialog.modal-lg
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title 過去のPC
+                  .modal-body
+                    .pc-summary
+                      .page-header
+                        %h2.h3 概要
+                        %p
+                          3台あり、PC98とDOS/V2台である。詳細不明。その他Nebuchadnezzarになる前のPCで余ったマザーボードが存在し、またCRTモニタが二台放置されている。Khrushchevは分解され、壊れていないHDDはAndoropovへ移設された。<br>Nebuchadnezzarが壊れ、新しいPC(NebuchadnezzarⅡ)が完成したため、使える部品だけを取り出されてあとは屑鉄と化した。これも過去のPCに。
+                    .pc-config
+                      .page-header
+                        %h2.h3 マシン構成
+                        %p
+                          Nebuchadnezzar以前の2台のPCの概要はほとんど不明。ただ、どちらかにPentiumがはいっていたので、非常に古いのが分かる。分解されたままになっておりほぼゴミ扱いである。謎の落書きが存在する。マイコン班活動場所は化学室にあり、その後部に放置されたままになっているが、処分予定は今のところない。
                   .modal-footer
                     %button.btn.btn-default(type="button" data-dismiss="modal") Close
             .col-md-4

@@ -48,7 +48,7 @@ gulp.task "img", ->
   return gulp.src "./src/**/img/*"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin/img"))
-    .pipe(gulp.dest("./bin/img"))
+    .pipe(gulp.dest("./bin"))
 
 gulp.task "lib-copy", ->
   return gulp.src(bower())
