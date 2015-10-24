@@ -17,6 +17,7 @@ addActiveTag = (activeList) ->
 setActive = (activeList) ->
   activeList.addClass("active")
   addActiveTag(activeList)
+  activeList.children("a").attr("href", "#")
   return
 
 # pjaxのロード
