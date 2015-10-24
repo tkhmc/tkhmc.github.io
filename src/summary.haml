@@ -45,6 +45,8 @@
                   %p
                     パソコン対人比が1.3くらいﾊｲ
                     %br
+                    %s> マイコン班だけど班長じゃなくて部長だし、班員じゃなくて部員と言い張っています。最近は若干賑やかになってます
+                    %br
                     ハム班との関わりは一切ない
                     %br
                     1年生しかいない
@@ -55,7 +57,16 @@
                     %th 肩書き
                   %tr
                     %td 1年生
-                    %td 両手の指の数程度の人数
+                    %td
+                    %td 班長
+                  %tr
+                    %td 1年生
+                    %td
+                      %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="emoji") (ﾟ∀ﾟ)
+                    %td とにかくうるさいやつ()
+                  %tr
+                    %td 1年生
+                    %td その他片手の指の数程度の人数
                     %td
                   %tr
                     %td(rowspan=12) OB
@@ -68,32 +79,53 @@
                     %td AVARIS
                     %td 前班長
                   %tr
-                    %td そをり
+                    %td
+                      %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="sowori") そをり
                     %td 看板娘など
                       %br
                       %small マスコット・モルモット・ドジっ娘・ハーマイオニー
                   %tr
-                    %td X
+                    %td
+                      %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="x") X
                     %td 副々班長･リナ厨
                   %tr
-                    %td noname
+                    %td
+                      %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="noname") noname
                     %td 前々班長
                   %tr
-                    %td つっちょ
+                    %td
+                      %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="tsutcho") つっちょ
                     %td 前々々班長
                   %tr
                     %td AutoLook
                     %td
                   %tr
-                    %td atmonad
+                    %td
+                      %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="atmonad") atmonad
                     %td
                   %tr
-                    %td yappy
+                    %td
+                      %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="yappy") yappy
                     %td 前々々々班長
                   %tr
-                    %td Prog.A
+                    %td
+                      %button.btn-link(type="button" data-toggle="modal" data-target="#Person" data-name="ProgA") Prog.A
                     %td 前々々々々部長
+                  %tr
+                    %td
+                      (その他多数)
+                    %td
                 %small 注:HNを持っていない人は人数のみ記載
+            #Person.modal.fade
+              .modal-dialog.modal-lg
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title
+                  .modal-body
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
             .col-md-4
               .panel.panel-default
                 .panel-heading
@@ -187,3 +219,4 @@
     %script(src="lib/bootstrap.min.js")
     %script(src="js/core.js")
     %script(src="js/pc.js")
+    %script(src="js/person.js")
