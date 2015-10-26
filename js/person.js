@@ -12,7 +12,9 @@
         return function(person) {
           var desc;
           modal = $(_this);
-          person = JSON.parse(person);
+          if (!(person instanceof Object)) {
+            person = JSON.parse(person);
+          }
           desc = person.desc;
           modal.find(".modal-body").html('<div class="row">' + desc + "</div>");
         };

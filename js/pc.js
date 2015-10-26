@@ -12,7 +12,9 @@
         return function(pc) {
           var config, configTable, desc, i, img, j, key, len, ref, v, val, winSAT, winSATD, winSATTable;
           modal = $(_this);
-          pc = JSON.parse(pc);
+          if (!(pc instanceof Object)) {
+            pc = JSON.parse(pc);
+          }
           desc = '<div class="pc-summary col-md-6"><div class="page-header"><h2 class="h3">概要</h2></div><p>' + pc.desc + '</p></div>';
           configTable = '<table class="table table-striped">';
           ref = pc.config;

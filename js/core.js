@@ -39,9 +39,9 @@
 
   pageMenu = function() {
     var filename, menuBrand;
-    filename = window.location.href.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1];
+    filename = window.location.href.match(".+/(.+?)\.[a-z]+([\?#;].*)?$");
     menuBrand = $(".menu-brand");
-    if ((filename == null) && filename !== "index") {
+    if ((filename[1] == null) && filename[1] !== "index") {
       menuBrand.attr("href", "index.html");
     } else {
       menuBrand.attr("href", "#");
