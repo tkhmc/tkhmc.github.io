@@ -135,12 +135,18 @@
                   %p
                     暗い色のものは破棄済み/使用していないPCです
                 %ul.list-group
-                  %li.list-group-item Einzbern
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="legendOfMicom") LegendOfMicom
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="joseph") JosephChamberlain
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="einzbern") Einzbern
                   %li.list-group-item
                     %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="harris") Harris
-                  %li.list-group-item Tolstoi
-                  %li.list-group-item Ptolemaios
                   %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="tolstoi") 幻のレッドスクリーン(Tolstoi)
+                  %li.list-group-item.old Ptolemaios
+                  %li.list-group-item.old
                     %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="alecthunder") Alecthunder
                   %li.list-group-item.old
                     %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="tiglathPileser") Tiglath-Pileser
@@ -156,7 +162,7 @@
                     %button.btn-link(type="button" data-toggle="modal" data-target="#PC" data-name="khrushchev") Khrushchev[フルシチョフ]
                   %li.list-group-item.old
                     %button.btn-link(type="button" data-toggle="modal" data-target="#PCOld") 過去のPC
-                %small 2012/06現在
+                %small 2015/10現在
             #PC.modal.fade
               .modal-dialog.modal-lg
                 .modal-content
