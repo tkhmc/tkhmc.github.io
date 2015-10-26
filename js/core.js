@@ -48,7 +48,7 @@
     }
     removeActiveTag();
     removeActiveAll();
-    setActive($(".menu-" + filename));
+    setActive($(".menu-" + filename[1]));
   };
 
   $(function() {
