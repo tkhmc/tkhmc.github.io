@@ -1,0 +1,13 @@
+{
+  "desc": "Andoropovの前のPC。過去のGorbachev(Brezhnev)である。昔は「最新型(ITOT)」という名前だったが、Andoropovが完成して最新でなくなったのでGorbachevという名前がつけられた。<s>唯一デュアルブートとなっている(ブートの順序も変わっていてまずSolarisのMBRがでてきてからNTLDRが起動する。またNTFS上にインストールされたKNOPPIXもNTLDRから起動できる。今はSolarisではなくFedoraCoreをとおしてUbuntuがはいっている。ただし、NebuchadnezzarⅡにあるより新しい別のLinuxがあるため、これはほとんど使われない。)ストレージ付け替え頻度が非常に多く、半分ケースが空いた状態である。今はあまりない。主になぜかCGI開発に用いられる。</s><br><s>Nebuchadnezzarが壊れたため、代用PCとしてこれが使われ始めた。なお、ブラウン管モニタが非常に使いづらかったため液晶を買おうとしたところ顧問の先生から使われなくなった液晶モニタをもらった。<br>NebuchadnezzarⅡでWindowsが起動しなくなった現在、代用開発環境として使われることがある。</s><br>2007年6月にWindows再起不能になったため、再インストールされた。それ以後はなぜかIDEXONと呼ばれる。<br>サウンドドライバがないため音が鳴らない。そのためそをりや小神あきひろがMIDIを作れないと文句を言っている。ビープ音使えばいいのに…",
+  "config": {
+    "OS": ["Windows XP <s>Professional</s> Home Edition", "<s>Ubuntu Linux</s>"],
+    "CPU": "AthlonXP 1800+",
+    "メモリ": "1GB",
+    "HDD": "160GB",
+    "モニタ": "15inch",
+    "ドライブ": ["CDドライブx1", "FDDx1"],
+    "ビデオカード": "<s>MATROX?</s>RADEON",
+    "サウンドカード": "不明"
+  }
+}

@@ -9,7 +9,7 @@ haml = require "gulp-haml"
 bower = require "main-bower-files"
 replace = require "gulp-replace"
 
-tasks = ["coffee", "haml", "scss", "img", "lib"]
+tasks = ["coffee", "haml", "scss", "img", "json", "lib"]
 gulp.task "default", tasks
 
 gulp.task "clean", (cb) ->
@@ -19,7 +19,8 @@ gulp.task "watch", ["default"], ->
   gulp.watch "./src/**/*.coffee", ["coffee"]
   gulp.watch "./src/**/*.haml", ["haml"]
   gulp.watch "./src/**/*.scss", ["scss"]
-  gulp.watch "./src/img/**/*", ["img"]
+  gulp.watch "./src/img/**", ["img"]
+  gulp.watch "./src/json/**", ["json"]
   return
 
 # compile
@@ -45,10 +46,16 @@ gulp.task "scss", ->
     .pipe(gulp.dest("./bin"))
 
 gulp.task "img", ->
-  return gulp.src "./src/**/img/*"
+  return gulp.src "./src/img/**"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin/img"))
-    .pipe(gulp.dest("./bin"))
+    .pipe(gulp.dest("./bin/img"))
+
+gulp.task "json", ->
+  return gulp.src "./src/json/**"
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(changed("./bin/json"))
+    .pipe(gulp.dest("./bin/json"))
 
 gulp.task "lib-copy", ->
   return gulp.src(bower())

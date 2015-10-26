@@ -1,0 +1,22 @@
+{
+  "desc": "2005年5月頃に完成した、3番目に速いマイコン班PC。Athlon64を搭載しているので、旧称は「Dempa64」だった。120GBのHDDをすべて(もちろん)正規版のWindowsXPHomeEditionが独占してある。<s>相対的にビデオカードの能力は金をケチったため、著しく能力が低くグラフィックプログラミング関係にはほとんど使えない。</s>(直後に開発が困難なことが発覚したためグラボは買い換えられまあまあのスペックは確保できている。)空冷だが非常に静か。<s>Knoppix3.9が起動できない</s>(Knoppix5.1なら可能)PIC書き込みに良く使われる。10月にKhrushchevのHDDが1台増設された。2008年からコモンダイアログの表示が遅くなるなど調子がおかしくなり、レジストリも壊れてきたのでOSを入れ替え。",
+  "config": {
+    "OS": ["<s>Windows XP Home Edition SP2</s>", "Windows Server 2003 R2 Enterprise Edition(評価版)"],
+    "CPU": "Athlon64 3000+",
+    "メモリ": "1GB",
+    "HDD": "120GB+32GB(Khrushchevからの移植)",
+    "モニタ": "17inch",
+    "ドライブ": ["スーパーコンボドライブx1", "FDDx1"],
+    "ビデオカード": "RADEON 9800Pro?",
+    "サウンドカード": "M/B付属チップ"
+  },
+  "winsat": {
+    "total": "4.8",
+    "cpu": "5.3",
+    "mem": "5.6",
+    "graphics": "4.8",
+    "gameGraphics": "5.0",
+    "hardDisc": "5.4"
+  },
+  "img": "img/andoropov.jpg"
+}
