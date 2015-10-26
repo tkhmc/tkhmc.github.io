@@ -50,7 +50,7 @@ $ ->
 
 if $.support.pjax
   # pjaxによる移動(アニメーション付き)
-  $(document).on("click", "a", (e) ->
+  $(document).on("click", "a:not(.out)", (e) ->
     e.preventDefault()
     href = $(@).attr("href")
     $("#pjax").animate({
