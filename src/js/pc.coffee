@@ -237,3 +237,8 @@ if $.support.pjax
   $(document).on("pjax:complete", (e, data) ->
     setEvent()
   )
+
+# 戻る/進む時にモーダルを非表示
+$(document).on("pjax:popstate", ->
+  $(document).find(".modal-backdrop").remove()
+)
