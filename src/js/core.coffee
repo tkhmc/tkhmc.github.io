@@ -32,7 +32,7 @@ pageMenu = ->
   filename = window.location.href.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1]
   menuBrand = $(".menu-brand")
   # .menu-brandのリンクをindex.htmlならひっぺがす
-  if filename isnt "index" and filename isnt ""
+  if !filename? and filename isnt "index"
     menuBrand.attr("href", "index.html")
   else
     menuBrand.attr("href", "#")
