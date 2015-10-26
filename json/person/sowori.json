@@ -1,0 +1,3 @@
+{
+  "desc": "<div class=\"profile col-md-6\"><div class=\"page-header\"><h2 class=\"h3\">プロフィール</h2></div><table class=\"table\"><tr><td>年齢</d><td>17</td></tr><tr><td>クラス</d><td>1年B組</td></tr><tr><td>趣味</d><td>ピアノとか・コスプレ(女装)</td></tr><tr><td>使用言語</td><td>C#</td></tr></table></div><div class=\"project col-md-6\"><div class=\"page-header\"><h2 class=\"h3\">担当プロジェクト</h2></div><ul class=\"list-group\"><li class=\"list-group-item\">痛イピング</li></ul></div><div class=\"sayin col-md-6\"><div class=\"page-header\"><h2 class=\"h3\">名言</h2></div><ul class=\"list-group\"><li class=\"list-group-item\">物理的に泣きそう</li><li class=\"list-group-item\">妹はロリじゃない</li><li class=\"list-group-item\">コスプレは最高に楽しい</li><li class=\"list-group-item\">自分で見ても可愛い</li></ul></div>"
+}
