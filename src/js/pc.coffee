@@ -8,7 +8,7 @@ setEvent = ->
     pcName = button.data("name")
     $.ajax("json/pc/#{pcName}.json").done( (pc) =>
       modal = $(@)
-      pc = JSON.parse(pc)
+      pc = JSON.parse(pc) unless pc instanceof Object
 
       # 説明
       desc = '<div class="pc-summary col-md-6"><div class="page-header"><h2 class="h3">概要</h2></div><p>' + pc.desc + '</p></div>'

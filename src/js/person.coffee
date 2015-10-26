@@ -8,7 +8,7 @@ setEvent = ->
     name = button.data("name")
     $.ajax("json/person/#{name}.json").done( (person) =>
       modal = $(@)
-      person = JSON.parse(person)
+      person = JSON.parse(person) unless person instanceof Object
 
       # 説明
       desc = person.desc
