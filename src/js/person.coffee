@@ -26,11 +26,8 @@ person = {
 }
 
 setEvent = ->
-  $(document).find("#Person").on("show.bs.modal", (e) ->
+  $("#Person").on("show.bs.modal", (e) ->
     button = $(e.relatedTarget)
-    console.log button
-    console.log person
-    console.log @
     name = button.data("name")
     modal = $(@)
     # タイトルを設定
