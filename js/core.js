@@ -41,7 +41,7 @@
     var filename, menuBrand;
     filename = window.location.href.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1];
     menuBrand = $(".menu-brand");
-    if (filename !== "index" && filename !== "") {
+    if ((filename == null) && filename !== "index") {
       menuBrand.attr("href", "index.html");
     } else {
       menuBrand.attr("href", "#");
@@ -56,7 +56,7 @@
   });
 
   if ($.support.pjax) {
-    $(document).on("click", "a", function(e) {
+    $(document).on("click", "a:not(.out)", function(e) {
       var href;
       e.preventDefault();
       href = $(this).attr("href");
@@ -75,6 +75,9 @@
       $("#pjax").animate({
         opacity: 1
       }, 300);
+      return pageMenu();
+    });
+    $(document).on("pjax:popstate", function() {
       return pageMenu();
     });
   }

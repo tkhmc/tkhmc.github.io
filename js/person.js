@@ -29,12 +29,9 @@
   };
 
   setEvent = function() {
-    $(document).find("#Person").on("show.bs.modal", function(e) {
+    $("#Person").on("show.bs.modal", function(e) {
       var button, desc, modal, name;
       button = $(e.relatedTarget);
-      console.log(button);
-      console.log(person);
-      console.log(this);
       name = button.data("name");
       modal = $(this);
       modal.find("h4.modal-title").text(button.text());
@@ -50,5 +47,9 @@
       return setEvent();
     });
   }
+
+  $(document).on("pjax:popstate", function() {
+    return $(document).find(".modal-backdrop").remove();
+  });
 
 }).call(this);

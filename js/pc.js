@@ -191,4 +191,8 @@
     });
   }
 
+  $(document).on("pjax:popstate", function() {
+    return $(document).find(".modal-backdrop").remove();
+  });
+
 }).call(this);
