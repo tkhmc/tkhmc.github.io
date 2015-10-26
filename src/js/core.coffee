@@ -85,6 +85,10 @@ if $.support.pjax
     pageMenu()
   )
 
+  $(document).on("pjax:popstate", ->
+    pageMenu()
+  )
+
 # bootstrapのtooltipの有効化
 $ ->
   $('[data-toggle="tooltip"]').tooltip()
