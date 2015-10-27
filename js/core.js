@@ -41,13 +41,16 @@
     var filename, menuBrand;
     filename = window.location.href.match(".+/(.+?)\.[a-z]+([\?#;].*)?$");
     menuBrand = $(".menu-brand");
-    if ((filename == null) || filename[1] !== "index") {
-      menuBrand.attr("href", "index.html");
-    } else {
+    if ((filename == null) || filename[1] === "index") {
       menuBrand.attr("href", "#");
+      filename = [];
+      filename[1] = "index";
+    } else {
+      menuBrand.attr("href", "index.html");
     }
     removeActiveTag();
     removeActiveAll();
+    console.log(filename);
     setActive($(".menu-" + filename[1]));
   };
 
