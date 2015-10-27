@@ -32,15 +32,18 @@ pageMenu = ->
   filename = window.location.href.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")
   menuBrand = $(".menu-brand")
   # .menu-brandのリンクをindex.htmlならひっぺがす
-  if !filename[1]? or filename[1] isnt "index"
-    menuBrand.attr("href", "index.html")
-  else
+  if !filename? or filename[1] is "index"
     menuBrand.attr("href", "#")
+    filename = []
+    filename[1] = "index"
+  else
+    menuBrand.attr("href", "index.html")
   # メニューのspan.sr-onlyをすべてとる
   removeActiveTag()
   # メニューの.activeをすべてとる
   removeActiveAll()
   # ついたページのところに.activeとspan.sr-onlyをつける
+  console.log filename
   setActive( $(".menu-" + filename[1]) )
   return
 
