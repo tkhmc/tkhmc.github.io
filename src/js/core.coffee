@@ -43,7 +43,6 @@ pageMenu = ->
   # メニューの.activeをすべてとる
   removeActiveAll()
   # ついたページのところに.activeとspan.sr-onlyをつける
-  console.log filename
   setActive( $(".menu-" + filename[1]) )
   return
 
