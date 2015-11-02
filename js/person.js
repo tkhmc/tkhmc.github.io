@@ -6,12 +6,16 @@
       var button, modal, name;
       button = $(e.relatedTarget);
       modal = $(this);
+      modal.find(".loading").removeClass("hidden");
+      modal.find(".modal-body").addClass("hidden");
       modal.find("h4.modal-title").text(button.text());
       name = button.data("name");
       $.ajax("json/person/" + name + ".json").done((function(_this) {
         return function(person) {
           var desc;
           modal = $(_this);
+          modal.find(".loading").addClass("hidden");
+          modal.find(".modal-body").removeClass("hidden");
           if (!(person instanceof Object)) {
             person = JSON.parse(person);
           }

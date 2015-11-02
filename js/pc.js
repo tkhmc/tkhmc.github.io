@@ -6,12 +6,16 @@
       var button, modal, pcName;
       button = $(e.relatedTarget);
       modal = $(this);
+      modal.find(".loading").removeClass("hidden");
+      modal.find(".modal-body").addClass("hidden");
       modal.find("h4.modal-title").text(button.text());
       pcName = button.data("name");
       $.ajax("json/pc/" + pcName + ".json").done((function(_this) {
         return function(pc) {
           var config, configTable, desc, i, img, j, key, len, ref, v, val, winSAT, winSATD, winSATTable;
           modal = $(_this);
+          modal.find(".loading").addClass("hidden");
+          modal.find(".modal-body").removeClass("hidden");
           if (!(pc instanceof Object)) {
             pc = JSON.parse(pc);
           }

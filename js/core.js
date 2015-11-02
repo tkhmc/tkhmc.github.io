@@ -50,7 +50,6 @@
     }
     removeActiveTag();
     removeActiveAll();
-    console.log(filename);
     setActive($(".menu-" + filename[1]));
   };
 
@@ -66,6 +65,7 @@
       return $("#pjax").animate({
         opacity: 0
       }, 300, function() {
+        $(".loading").removeClass("hidden");
         return $.pjax({
           url: href,
           container: "#pjax",
@@ -75,6 +75,7 @@
       });
     });
     $(document).on("pjax:complete", function(e, data) {
+      $(".loading").addClass("hidden");
       $("#pjax").animate({
         opacity: 1
       }, 300);
