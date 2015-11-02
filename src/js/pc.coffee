@@ -2,12 +2,17 @@ setEvent = ->
   $("#PC").on("show.bs.modal", (e) ->
     button = $(e.relatedTarget)
     modal = $(@)
+    modal.find(".loading").removeClass("hidden")
+    modal.find(".modal-body").addClass("hidden")
+
     # タイトルを設定
     modal.find("h4.modal-title").text(button.text())
 
     pcName = button.data("name")
     $.ajax("json/pc/#{pcName}.json").done( (pc) =>
       modal = $(@)
+      modal.find(".loading").addClass("hidden")
+      modal.find(".modal-body").removeClass("hidden")
       pc = JSON.parse(pc) unless pc instanceof Object
 
       # 説明

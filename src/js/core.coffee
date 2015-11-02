@@ -58,6 +58,7 @@ if $.support.pjax
     $("#pjax").animate({
       opacity: 0
     }, 300, ->
+      $(".loading").removeClass("hidden")
       $.pjax({
         url: href
         container: "#pjax"
@@ -78,6 +79,7 @@ if $.support.pjax
 
   # 完了処理
   $(document).on("pjax:complete", (e, data) ->
+    $(".loading").addClass("hidden")
     # 完了アニメーション
     $("#pjax").animate({
       opacity : 1

@@ -37,6 +37,7 @@
                   %a(href="links.html")> リンク
       #contents.container
         .main#pjax
+          .loading.hidden
           .page-header
             %h1 概要
           .row
@@ -124,6 +125,7 @@
                     %button.close(type="button" data-dismiss="modal")
                       %span> &times;
                     %h4.modal-title
+                  .loading.hidden
                   .modal-body
                   .modal-footer
                     %button.btn.btn-default(type="button" data-dismiss="modal") Close
@@ -170,6 +172,7 @@
                     %button.close(type="button" data-dismiss="modal")
                       %span> &times;
                     %h4.modal-title
+                  .loading.hidden
                   .modal-body
                   .modal-footer
                     %button.btn.btn-default(type="button" data-dismiss="modal") Close
