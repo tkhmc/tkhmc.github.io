@@ -1,0 +1,328 @@
+!!!
+%html(lang="ja")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    %meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+
+    %title Javaパッケージ名 - 東海高校マイコン班
+
+    %link(rel="stylesheet" href="lib/bootstrap.min.css")
+    %link(rel="stylesheet" href="css/core.css")
+
+    %link(rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48")
+    %link(rel="shortcut icon" href="img/favicon.ico")
+  %body
+    #wrap
+      %header.container
+        %nav.navbar.navbar-default
+          .container-fluid
+            .navbar-header
+              %button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#navbar-collapse")
+                %span.sr-only Toggle navigation
+                %span.icon-bar
+              %a.navbar-brand.menu-brand(href="index.html") 東海高校マイコン
+            .collapse.navbar-collapse#navbar-collapse
+              %ul.nav.navbar-nav
+                %li.menu-index.active
+                  %a(href="index.html")> ホーム
+                %li.menu-summary
+                  %a(href="summary.html")> 概要
+                %li.menu-activity
+                  %a(href="activity.html")> 活動内容
+                %li.menu-products
+                  %a(href="products.html")> 制作物
+                %li.menu-links
+                  %a(href="links.html")> リンク
+      #contents.container
+        .main#pjax
+          .page-header
+            %h1 Javaパッケージ名
+          .row
+            .col-md-12
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title 概要
+                .panel-body
+                  %p
+                    マイコン班は東海中学校・東海高校のJavaパッケージの命名規約を標準化しています。
+            .col-md-12
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title ルート
+                .panel-body
+                  %p
+                    東海高等学校のドメイン
+                    %br
+                    tokai-jh.ed.jp
+                    %br
+                    をひっくり返し、ハイフンをアンダースコアに置き換えたものを東海中学校・東海高校のルートパッケージ名とします。
+                    %br
+                    jp.ed.tokai_jh
+            .col-md-12
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title マイコン班の音
+                .panel-body
+                  %p
+                    このルートパッケージの下に各部活名が置かれます。
+                    %br
+                    対応表はマイコン班が管理しています。
+                    %br
+                    変更を希望する部活はマイコン班に申請し、許可されれば変更されます。
+                  .row
+                    .col-md-6
+                      .panel.panel-default
+                        .panel-heading
+                          %h3.panel-title 運動部
+                        %table.table
+                          %tr
+                            %th 部活名
+                            %th パッケージ名
+                          %tr
+                            %td 野球部
+                            %td baseball
+                          %tr
+                            %td バスケットボール部
+                            %td basketball
+                          %tr
+                            %td バレーボール部
+                            %td volleyball
+                          %tr
+                            %td サッカー部
+                            %td soccer
+                          %tr
+                            %td テニス部
+                            %td tennis
+                          %tr
+                            %td 卓球部
+                            %td tabletennis
+                          %tr
+                            %td 陸上競技部
+                            %td
+                          %tr
+                            %td 相撲部
+                            %td sumo
+                          %tr
+                            %td 柔道部
+                            %td judo
+                          %tr
+                            %td 剣道部
+                            %td kendo
+                          %tr
+                            %td 弓道部
+                            %td kyudo
+                          %tr
+                            %td 水泳部
+                            %td swimming
+                          %tr
+                            %td ハンドボール部
+                            %td handball
+                          %tr
+                            %td バドミントン部
+                            %td
+                          %tr
+                            %td ワンダーフォーゲル部
+                            %td
+                          %tr
+                            %td スキー部
+                            %td ski
+                          %tr
+                            %td アーチェリー部
+                            %td
+                          %tr
+                            %td ゴルフ部
+                            %td golf
+                          %tr
+                            %td ラグビー同好会
+                            %td
+                          %tr
+                            %td 山岳部
+                            %td mountain
+                          %tr
+                            %td 馬術部
+                            %td horse
+                          %tr
+                            %td ラグビー部
+                            %td
+                          %tr
+                            %td アメリカンフットボール部
+                            %td
+                          %tr
+                            %td 自転車同好会
+                            %td
+                          %tr
+                            %td ボウリング同好会
+                            %td
+                          %tr
+                            %td 釣同好会
+                            %td fishing
+                    .col-md-6
+                      .panel.panel-default
+                        .panel-heading
+                          %h3.panel-title 文化部
+                        %table.table
+                          %tr
+                            %th 部活名
+                            %th パッケージ名
+                          %tr
+                            %td 電波科学研究部
+                            %td radio
+                          %tr
+                            %td 文芸部
+                            %td
+                          %tr
+                            %td 歴史研究部
+                            %td history
+                          %tr
+                            %td 科学部
+                            %td science
+                          %tr
+                            %td 無線研究部
+                            %td ham
+                          %tr
+                            %td 生物部
+                            %td biology
+                          %tr
+                            %td 宗教研究部
+                            %td
+                          %tr
+                            %td 地学部
+                            %td
+                          %tr
+                            %td 天文部
+                            %td
+                          %tr
+                            %td 弁論部
+                            %td
+                          %tr
+                            %td 園芸部
+                            %td
+                          %tr
+                            %td 美術部
+                            %td art
+                          %tr
+                            %td 写真部
+                            %td picture
+                          %tr
+                            %td 放送部
+                            %td
+                          %tr
+                            %td 合唱部
+                            %td
+                          %tr
+                            %td オーケストラ部
+                            %td
+                          %tr
+                            %td 棋道部
+                            %td
+                          %tr
+                            %td 百人一首部
+                            %td
+                          %tr
+                            %td 吹奏楽部
+                            %td
+                          %tr
+                            %td 書道部
+                            %td
+                          %tr
+                            %td ESS
+                            %td ess
+                          %tr
+                            %td PFC
+                            %td pfc
+                          %tr
+                            %td 演劇部
+                            %td
+                          %tr
+                            %td 数学研究部
+                            %td
+                          %tr
+                            %td 軽音楽同好会
+                            %td
+                          %tr
+                            %td 映画研究部
+                            %td eiken
+                          %tr
+                            %td 新聞部
+                            %td newspaper
+                          %tr
+                            %td 社会研究部
+                            %td
+                          %tr
+                            %td 図書部
+                            %td
+                          %tr
+                            %td 漫画研究部
+                            %td manken
+                          %tr
+                            %td 交通同好会
+                            %td
+                          %tr
+                            %td 模型同好会
+                            %td
+                          %tr
+                            %td 第二外国語同好会
+                            %td
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title 部内での分割
+                .panel-body
+                  %p さらに電波科学研究部はマイコン班とハム班に分かれるので、その下を次のように分けます。
+                %table.table
+                  %tr
+                    %td マイコン班
+                    %td micom
+                  %tr
+                    %td ハム班
+                    %td ham
+            .col-md-8
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title その下
+                .panel-body
+                  そこから先は部内で自由に管理することができます。
+                  %h3 推奨される方法
+                  %ul.list-group
+                    %li.list-group-item
+                      個人のプロジェクト
+                      %ul.list-group
+                        %li.list-group-item まずユニークな個人のニックネームを置く。
+                        %li.list-group-item さらにプロジェクト名を置く。
+                        %li.list-group-item その先は自由にサブパッケージを作る。
+                    %li.list-group-item
+                      部全体のプロジェクト
+                      %ul.list-group
+                        %li.list-group-item プロジェクト名を置く。
+                        %li.list-group-item その先は自由にサブパッケージを作る。
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title 例
+                .panel-body
+                  電波科学研究部(radio)マイコン班(micom)のyappyのテストプロジェクト(testproject)のパッケージ
+                  %pre
+                    package jp.ed.tokai_jh.radio.micom.yappy.testproject;
+                    %br
+                    public class TestProject {
+                    %br
+                    \  public static void main(String[] args){
+                    %br
+                    \    System.out.println("This is test.");
+                    %br
+                    \  }
+                    %br
+                    }
+      %footer.footer
+        .container
+          %p.text-muted
+            (C) 東海高校電波科学研究部マイコン班 (ﾟ∀ﾟ) 2005-2015
+
+    %script(src="lib/modernizr.js")
+    %script(src="lib/jquery.min.js")
+    %script(src="lib/jquery.pjax.js")
+    %script(src="lib/bootstrap.min.js")
+    %script(src="js/core.js")
+    %script(src="js/pc.js")
+    %script(src="js/person.js")
