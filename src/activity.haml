@@ -1,0 +1,370 @@
+!!!5
+%html(lang="ja")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    %meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+
+    %title 活動内容 - 東海高校マイコン班
+
+    %link(rel="stylesheet" href="lib/bootstrap.min.css")
+    %link(rel="stylesheet" href="css/core.css")
+
+    %link(rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48")
+    %link(rel="shortcut icon" href="img/favicon.ico")
+  %body
+    #wrap
+      %header.container
+        %nav.navbar.navbar-default
+          .container-fluid
+            .navbar-header
+              %button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#navbar-collapse")
+                %span.sr-only Toggle navigation
+                %span.icon-bar
+              %a.navbar-brand.menu-brand(href="index.html") 東海高校マイコン
+            .collapse.navbar-collapse#navbar-collapse
+              %ul.nav.navbar-nav
+                %li.menu-index.active
+                  %a(href="index.html")> ホーム
+                    %span.sr-only> (current)
+                %li.menu-summary
+                  %a(href="summary.html")> 概要
+                %li.menu-activity
+                  %a(href="activity.html")> 活動内容
+                %li.menu-products
+                  %a(href="products.html")> 制作物
+                %li.menu-links
+                  %a(href="links.html")> リンク
+      #contents.container
+        .main#pjax
+          .loading.hidden
+          .page-header
+            %h1 活動内容
+          .row
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title 記念祭
+                %ul.list-group
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#Kinensai" data-name="127") 記念祭127th
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#Kinensai" data-name="119") 記念祭119th
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#Kinensai" data-name="118") 記念祭118th
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#Kinensai" data-name="117") 記念祭117th
+            #Kinensai.modal.fade
+              .modal-dialog.modal-lg
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title
+                  .loading.hidden
+                  .modal-body
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title コンテスト
+                %ul.list-group
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#Olympic") 情報オリンピック
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#Koshien") パソコン甲子園
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#SuperCon") スパコン
+                  %li.list-group-item
+                    %button.btn-link(type="button" data-toggle="modal" data-target="#U22") U22プログラミングコンテスト
+            #Olympic.modal.fade
+              .modal-dialog.modal-lg
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title 情報オリンピック
+                  .modal-body
+                    .olympic-summary
+                      .page-header
+                        %h2.h3 概要
+                      %blockquote
+                        %p 現在、高校生以下の生徒を対象とする次の6つのサイエンスオリンピックがあります（そのうちのいくつかはUNESCOの提唱で始まりました）。
+                        %ul.list-group
+                          %li.list-group-item 数学　・・・　1959年から（日本は1990年から参加）
+                          %li.list-group-item 物理　・・・　1967年から（日本は2006年から参加）
+                          %li.list-group-item 化学　・・・　1968年から（日本は2003年から参加）
+                          %li.list-group-item 情報　・・・　1989年から（日本は1994～1996年参加、2006年から参加再開）
+                          %li.list-group-item 生物　・・・　1990年から（日本は2005年から参加）
+                          %li.list-group-item 天文　・・・　1996年から（日本は未だ不参加）
+                      %p
+                        国際情報オリンピック(略称 IOI)と日本情報オリンピック(略称 JOI)を総括する言葉。
+                        %br
+                        国際情報オリンピックは高校生を対象として開かれる世界的プログラミングコンテスト(一番はじめの引用文より)。頭で争う科学五輪の一環として開催している。
+                        %br
+                        日本ではしばらくの間参加を凍結していたが去年より再び参加を表明し、そこでコンテストの日本代表を選出するコンテスト「日本情報オリンピック」が再開された。
+                        そこで、国際情報オリンピックに出場するにはまず日本情報オリンピックで選ばれる必要がある。
+                      %p
+                        %a(href="http://www.ioi-jp.org/") 情報オリンピック日本委員会
+                    .olympic-jp-system
+                      .page-header
+                        %h2.h3 方式(日本情報オリンピック)
+                      %ul.list-group
+                        %li.list-group-item 個人戦である。
+                        %li.list-group-item 予選は公式サイトWeb上で実施される。与えられた問題を制限時間内に解く。
+                        %li.list-group-item 予選通過は30名程度。変動があるかもしれない。
+                        %li.list-group-item 本選は東京に会場が用意され、予選と同じように解く。(日帰り)
+                        %li.list-group-item 本選は10名程度が通過し、そのうち4名が代表に選出される。
+                        %li.list-group-item その後本選通過者には合宿があり、そこで行われる試験の成績を元に代表が選出される。
+                    .olympic-world-system
+                      .page-header
+                        %h2.h3 方式(国際情報オリンピック)
+                      %ul.list-group
+                        %li.list-group-item 個人戦である。
+                        %li.list-group-item 日本情報オリンピックと同じように解く。
+                    .olympic-prize
+                      .page-header
+                        %h2.h3 待遇・賞品
+                      %p
+                        待遇では交通費・合宿の費用を全てまかなってくれる。
+                        %br
+                        賞品は去年度には本選一位にPCが与えられた。また本選通過者に本選で全員の解答を回収するために使われたUSBメモリが全員に与えられた。今年はどうなるか不明。
+                        %br
+                        今年から　～オリンピック　シリーズへの予算が10倍になるという情報をキャッチしました！1億→10億とのこと。情報オリンピックは1000万→1億の予想。
+                    .olympic-howto
+                      .page-header
+                        %h2.h3 情報オリンピックを勝ち抜くためには(勉強方法)
+                      %p
+                        %a(href="lecture.html")> プログラミング講座
+                        で過去問の解説をおこなっているので、ぜひ読んでみて欲しい。
+                    .olympic-result
+                      .page-header
+                        %h2.h3 結果
+                      %ul.list-group
+                        %li.list-group-item
+                          %h3.h4 2005
+                          %ul.list-group
+                            %li.list-group-item yappy:   最終的に本選突破。ただし代表には選出されず。
+                            %li.list-group-item atmonad: 予選を1時間遅れで始めて突破。本選でファイル名を間違えて落ちる。(←実は解くのにつまっていてどっちにしろ落ちていたのでこれは原因ではない。)
+                        %li.list-group-item
+                          %h3.h4 2006
+                          %p
+                            今年(来年)の国際情報オリンピックはクロアチアで開かれる。
+                            %br
+                            12月17日予選。去年より問題が大幅に簡単になり、ボーダーラインが大幅に上昇した。
+                            %br
+                            2月12日本選。
+                          %ul.list-group
+                            %li.list-group-item yappy:    本選通過(銀メダル)
+                            %li.list-group-item atmonad:  予選で敗退
+                            %li.list-group-item つっちょ: 予選で敗退
+                        %li.list-group-item
+                          %h3.h4 2007
+                          %p
+                            12月16日予選。今度は問題が難しくなった。難→易→難→(ry の無限ループか？
+                            %br
+                            結果的に全員予選落ち。
+                        %li.list-group-item
+                          %h3.h4 2008
+                          %p
+                            予選は12月14日。予算が増えたのであろうか、本選は1泊2日に変更されたっぽい。
+                            %br
+                            去年の成績から考えると誰かが本選に出てもおかしくはないが…
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
+            #Koshien.modal.fade
+              .modal-dialog.modal-lg
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title パソコン甲子園
+                  .modal-body
+                    .koshien-summary
+                      .page-header
+                        %h2.h3 概要
+                      %p
+                        毎年高校生を対象に開かれているコンテスト。
+                        %br
+                        プログラミング部門・デジタルコンテンツ部門・2006年より一枚の絵CG部門追加。
+                        %br
+                        プログラミング部門だな。
+                      %p
+                        %a(href="http://web-ext.u-aizu.ac.jp/pc-concours/") パソコン甲子園
+                    .koshien-system
+                      .page-header
+                        %h2.h3 方式
+                      %p
+                        予選は学校で。1台のパソコンで与えられた問題を制限時間内に解きます。
+                        %br
+                        2006年からオンラインシステムが導入されました。
+                        %br
+                        予選通過チームは25チーム(2005年までは20チーム)。
+                        %br
+                        本選は福島県で行われる。
+                        %br
+                        本選も同じような形式。ただし全チームの得点状況がリアルタイムで表示されるらしい。
+                    .koshien-prize
+                      .page-header
+                        %h2.h3 待遇・賞品
+                      %p
+                        予選通過すると福島までの交通費・宿泊費を出場者全員+教員1名分全額負担。
+                        %br
+                        福島県が推進しているので待遇も賞品もかなりいいです。
+                        %br
+                        記憶だと本選1位はパソコン1人1台（かなりいいやつ）と奨学金50万円
+                    .koshien-howto
+                      .page-header
+                        %h2.h3 パソコン甲子園を勝ち抜くためには(勉強方法)
+                      %p
+                        %a(href="lecture.html")> プログラミング講座
+                        で過去問の解説をおこなっているので、ぜひ読んでみて欲しい。
+                    .koshien-result
+                      .page-header
+                        %h2.h3 結果
+                      %ul.list-group
+                        %li.list-group-item
+                          %h3.h4 2005
+                          %p 予選敗退。
+                        %li.list-group-item
+                          %h3.h4 2006
+                          %p
+                            予選10問中8問解答成功。9/15結果発表。なぜか予選落ち。なぜ・・・。
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
+            #SuperCon.modal.fade
+              .modal-dialog.modal-lg
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title スパコン
+                  .modal-body
+                    .supercon-summary
+                      .page-header
+                        %h2.h3 概要
+                      %p
+                        正しくは
+                        %b> スーパーコンピューティングコンテスト
+                        らしい。
+                        %br
+                        毎年高校生を対象に開かれているコンテスト。
+                        %br
+                        予選を突破すれば東工大のスーパーコンピューター(略称スパコン)を使って本選を行う。
+                        %br
+                        2006年より日本最速のスーパーコンピューター、「STUBAME?」が導入された。
+                        %br
+                        一つの問題に対し、どれだけ効率のよい結果を出すプログラムを作るかを争う競技。
+                      %p
+                        %a(href="http://www.gsic.titech.ac.jp/supercon/main/attwiki/") スパコン
+                    .supercon-system
+                      .page-header
+                        %h2.h3 方式
+                      %ul.list-group
+                        %li.list-group-item 予選問題は一つの問題が出される。
+                        %li.list-group-item 予選問題の解答プログラムは締め切りまでにメールで提出。
+                        %li.list-group-item 予選通過チームは20チーム(東京、大阪会場にてそれぞれ10チームが割り当てられる)。
+                        %li.list-group-item 本選は東京工業大学と大阪大学で行われる。
+                        %li.list-group-item 本選も同じような形式。
+                    .supercon-prize
+                      .page-header
+                        %h2.h3 待遇・賞品
+                      %p
+                        2006年は予選通過すると交通費・宿泊費合わせて一名当たり25000円補助。
+                        %br
+                        ただし、本来は全く補助なしとの記載だった。
+                        %br
+                        本選1位
+                        %br
+                        ワークステーションなど
+                        %br
+                        他にも出場者にはいろいろ参加賞をもらった。
+                        %br
+                        Microsoftよりロゴ入りの長田屋のカステラ
+                        %br
+                        MicrosoftよりWindowsClusterServerのストラップ
+                        %br
+                        MicrosoftよりWindowsClusterServerのステッカー
+                        %br
+                        Intelよりロゴ入り電卓
+                        %br
+                        ？より東工大と協賛企業のロゴ入りのUSBメモリ(128MB)
+                    .supercon-result
+                      .page-header
+                        %h2.h3 結果
+                      %ul.list-group
+                        %li.list-group-item
+                          %h3.h4 2006
+                          %p ほとんど通過のなかで予選突破。7/31～8/5の期間中に本選開催。第一次審査で大阪にて4位。
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
+            #U22.modal.fade
+              .modal-dialog.modal-lg
+                .modal-content
+                  .modal-header
+                    %button.close(type="button" data-dismiss="modal")
+                      %span> &times;
+                    %h4.modal-title U22プログラミングコンテスト
+                  .modal-body
+                    .u22-summary
+                      .page-header
+                        %h2.h3 概要
+                      %p
+                        毎年プログラミングやソフトウェア開発に関心のある日本国内に居住する満22歳以下の人からソフトウェア作品を広く募集しているコンテスト。
+                        %br
+                        作品の開発人数によって個人部門と団体部門に分かれる。
+                      %p
+                        %a(href="http://www.u22procon.com/") U22プログラミングコンテスト
+                    .u22-system
+                      .page-header
+                        %h2.h3 方式
+                      %ul.list-group
+                        %li.list-group-item 締め切りまでに独自のソフトウェア作品を資料と共に一人なら個人部門、団体なら団体部門で提出する。
+                        %li.list-group-item 一次審査を突破すると東京で特に理由が無い限り発表することになる。
+                    .u22-prize
+                      .page-header
+                        %h2.h3 待遇・賞品
+                      %p
+                        最優秀賞 経済産業大臣表彰および副賞（15万円相当の物品）: 個人・団体部門各1点
+                        %br
+                        優秀賞	経済産業大臣表彰および副賞（8万円相当の物品）: 個人・団体部門各数点
+                        %br
+                        入賞	経済産業省商務情報政策局長表彰および副賞（3万円相当の物品）: 個人・団体部門各数点
+                    .supercon-result
+                      .page-header
+                        %h2.h3 結果
+                      %ul.list-group
+                        %li.list-group-item
+                          %h3.h4 2006
+                          %p
+                            yappy: 作品が一次審査突破。入賞止まり。作品名はFutureNetworkCommunicator。
+                            %del> 元ネタは遊戯王カード「未来融合-フューチャーフュージョン」。
+                  .modal-footer
+                    %button.btn.btn-default(type="button" data-dismiss="modal") Close
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title ドキュメント
+                %ul.list-group
+                  %li.list-group-item
+                    %a(href="lecture.html") プログラミング講座
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  %h2.panel-title プロジェクト
+                .panel-body
+
+      %footer.footer
+        .container
+          %p.text-muted
+            (C) 東海高校電波科学研究部マイコン班 (ﾟ∀ﾟ) 2005-2016
+
+    %script(src="lib/modernizr.js")
+    %script(src="lib/jquery.min.js")
+    %script(src="lib/jquery.pjax.js")
+    %script(src="lib/bootstrap.min.js")
+    %script(src="js/core.js")
+    %script(src="js/pc.js")
+    %script(src="js/person.js")
+    %script(src="js/kinensai.js")
