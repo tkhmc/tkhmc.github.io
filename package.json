@@ -1,13 +1,13 @@
 {
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tkhsmc/tkhsmc.github.io.git"
+    "url": "git+https://github.com/tkhmc/tkhmc.github.io.git"
   },
   "author": "tkhsmc",
   "bugs": {
-    "url": "https://github.com/tkhsmc/tkhsmc.github.io/issues"
+    "url": "https://github.com/tkhmc/tkhmc.github.io/issues"
   },
-  "homepage": "https://github.com/tkhsmc/tkhsmc.github.io#readme",
+  "homepage": "https://github.com/tkhmc/tkhmc.github.io#readme",
   "devDependencies": {
     "bower": "^1.5.3",
     "coffee-script": "^1.10.0",
